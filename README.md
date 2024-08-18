@@ -19,7 +19,6 @@ This project involves developing a Convolutional Neural Network (CNN) to classif
 2. Define and compile the CNN model:
    model = models.Sequential()
    model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(224, 224, 3)))
-   # Add more layers
    model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 3. Train the model:
    history = model.fit(train_it, steps_per_epoch=train_it.samples // train_it.batch_size, epochs=5, validation_data=val_it)
@@ -28,7 +27,6 @@ This project involves developing a Convolutional Neural Network (CNN) to classif
    model.save("lung_disease_classification_model.h5")
 5. Load the model and make predictions:
    loaded_model = load_model("lung_disease_classification_model.h5")
-   # Predict on a new image
    
 # Results
 The trained model demonstrated high accuracy in classifying different types of lung diseases. The model can be used for automated diagnosis based on chest X-ray images.
